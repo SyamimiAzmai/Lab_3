@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYAMIMI AZMAI - Personal Website</title>
+    <link rel="stylesheet" href="PersonalWebsite.css">
+</head>
+<body>
+    <header>
+        <h1>SYAMIMI AZMAI</h1>
+        <p>Web Developer | Explorer | Creative Mind</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#bio">Bio</a></li>
+            <li><a href="#hobbies">Hobbies</a></li>
+            <li><a href="#campus-life">Campus Life</a></li>
+        </ul>
+    </nav>
+
+    <section id="bio">
+        <h1>Biodata</h1>
+        <div class="bio-container">
+            <div class="bio-left">
+                <img src="Syamimi.jpg" alt="SYAMIMI"> <br>
+            </div>
+            <div class="bio-right">
+                <br><p><strong>Name:</strong> Nur Syamimi Binti Che Azmai </p>
+                <br><p><strong>Date of Birth:</strong> January 7, 2000 </p>
+                <br><p><strong>Religion:</strong> Islam </p>
+                <br><p><strong>Race:</strong> Malay </p>
+                <br><p><strong>Address:</strong> Ajil, Terengganu </p>
+                <br><p><strong>Mobile Phone:</strong> 011-37577973</p>
+                <!--<p><strong>Course and Institution:</strong> Computer Science at University Tun Hussein Onn Malaysia (BIP)</p>
+                <p><strong>Programming Skills:</strong> C, C++, HTML, JAVA, PHP and PHYTON </p>
+                <p><strong>Personal Interests:</strong> Watching Movie, Reading and Listening Music </p>
+                <p><strong>Future Plans in 2024:</strong> Advancements in the realm of programming language</p> -->
+    </section>
+
+    <section id="hobbies">
+        <h1>Hobbies</h1>
+        <ul>
+            <br><li><p><strong>Watching Movies:</strong> This is where I sit down to enjoy films or movies. It's a way to me to have fun, relax and be entertained by the stories and characters on the screen. </p></li>
+            <br><li><p><strong>Reading:</strong> I love reading novels. It's my hobby of exploring books with long, fictional stories. It's way for me to escape into different worlds, follow interesting characters and experience adventures through the pages of a book. </p></li>
+            <br><li><p><strong>Listening Music:</strong> I enjoy different types of music, whether it's songs, melodies or tunes. I listen to music to feel happy, relaxed or to express my emotions through the sounds I love.  </p></li>
+            <br><li><p><strong>Travel:</strong> I have a passion for travelling. It's my hobby of exploring new places, whether they are near or far from home. It's a way for me to experience different cultures, see new sights and create memories by visiting various destinations and enjoying adventures along the way.  </p></li> 
+        </ul>
+    </section>
+
+    <section id="campus-life">
+        <h1>Campus Life</h1>
+        <br><p>
+            In the picturesque town of Batu Pahat, where the lush greenery met the bustling urban life, I found my second home at Universiti Tun Hussein Onn Malaysia (UTHM). As a third-year student in the Bachelor in Programming (BIP) program, specializing in computer science, my campus life was a captivating blend of academic challenges, personal growth, and unforgettable experiences. 
+            My academic journey had been a rollercoaster of learning. From the very first day, the world of coding, algorithms, and databases had beckoned me, and I eagerly accepted the challenge. The logic of programming languages and the intricacies of computer science became my daily companions. 
+        </p>
+        <br><p>
+            My campus life was not just about academic challenges; it was also a journey of personal growth and self-discovery. My friends became mirrors reflecting my strengths, helping me navigate through weaknesses, and encouraging me to step out of my comfort zone. The diversity of our friendships exposed me to new perspectives, cultures, and ways of thinking.
+        </p>
+        <br><p>
+            In 2024, I have ambitious plans to take my programming skills to the next level. I am committed to diving deeper into the intricate world of programming languages, mastering not only the fundamentals but also exploring more advanced and specialized areas.
+            My aspiration is to become a proficient coder who can tackle complex challenges with finesse. I intend to enhance my knowledge of cutting-edge technologies, data structures, and software development practices. By delving into advanced programming languages and tools, I hope to position myself as a capable and versatile programmer.
+        </p> <br><br>
+
+            <div class="image-gallery">
+                <img src="Kelas1.jpg" alt="Campus Image 1">
+                <img src="Housemate1.jpg" alt="Campus Image 2">
+                <img src="Kelas2.jpg" alt="Campus Image 3">
+                <img src="Housemate3.jpg" alt="Campus Image 4">
+                <img src="Kelas3.jpg" alt="Campus Image 5">  
+                <img src="Koko1.jpg" alt="Campus Image 6">
+                <img src="Housemate2.jpg" alt="Campus Image 7">
+            </div>
+            
+            <script>
+                let slideIndex = 1;
+            
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+            
+                function showSlides(n) {
+                    let i;
+                    const slides = document.querySelectorAll('.mySlides');
+                    if (n > slides.length) { slideIndex = 1 }
+                    if (n < 1) { slideIndex = slides.length }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                }
+            
+                // Auto start the slideshow
+                let slideInterval = setInterval(function () {
+                    plusSlides(1);
+                }, 3000);
+            
+                // Stop the slideshow when the user hovers over it
+                document.querySelector('.slideshow-container').addEventListener('mouseenter', function () {
+                    clearInterval(slideInterval);
+                });
+            
+                // Restart the slideshow when the user moves the mouse away
+                document.querySelector('.slideshow-container').addEventListener('mouseleave', function () {
+                    slideInterval = setInterval(function () {
+                        plusSlides(1);
+                    }, 3000);
+                });
+            
+                // Initialize the slideshow
+                showSlides(slideIndex);
+            </script>
+            
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 | SYAMIMI AZMAI | 070100</p>
+    </footer>
+
+    <script>
+        const menuItems = document.querySelectorAll('.nav a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', function() {
+                menuItems.forEach(item => item.classList.remove('active'));
+                this.classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

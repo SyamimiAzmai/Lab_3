@@ -1,0 +1,118 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    /*background-color: #FFFCC7;*/
+}
+
+/* Style the header */
+header {
+    background-color: #ed4376;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/* Style the navigation menu */
+nav ul {
+    list-style: none;
+    text-align: center;
+    background-color: #c3bebe;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+.nav a {
+    color: #ff0000; /* Default color for menu items */
+    text-decoration: none;
+    padding: 10px;
+}
+
+.nav a:hover {
+    color: rgb(15, 22, 222); /* Color when hovering over menu items */
+}
+
+.nav a.active {
+    color: #ff0000; /* Color for the selected (active) menu item */
+}
+
+/* Style the sections */
+section {
+    margin: 20px;
+    padding: 20px;
+    background-color: #db98ab;
+    border: 3px solid #000000;
+    border-radius: 5px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+}
+
+/* Style the footer */
+footer {
+    text-align: center;
+    background-color: #ed4376;
+    color: #000000;
+    padding: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.bio-container img {
+    display: block;
+    margin: 0 auto;
+    max-width: 30%; /* Adjust the maximum width as needed */
+    height: auto;
+}
+
+/* Style text after the colon (':') */
+.colon-styled {
+    color: #333; /* Change the color to your preference */
+    font-weight: bold; /* Add any additional styling as desired */
+}
+
+/* Style the slideshow container */
+.slideshow-container {
+    position: relative;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+/* Style individual slides */
+.mySlides {
+    display: none;
+}
+
+/* Style the navigation buttons (prev/next) */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* Style the image gallery */
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style individual images */
+.image-gallery img {
+    max-width: 30%; /* You can adjust this value as needed */
+    height: auto; /* Maintain the aspect ratio */
+    margin: 10px; /* Add margin between images for spacing */
+}
+
+
+
+
